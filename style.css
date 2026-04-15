@@ -1,150 +1,41 @@
-/* Variables de couleurs */
-:root {
-    --primary-color: #0070f3; /* Bleu tech */
-    --dark-color: #111111;
-    --light-bg: #f8f9fa;
-    --text-color: #444;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-    line-height: 1.6;
-    background-color: white;
-}
-
-/* Navigation */
+/* Style inspiré du template Wix Clean */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    padding: 25px 10%;
+    background: white;
     position: fixed;
     width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #eaeaea;
+    z-index: 100;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--dark-color);
-}
-
-.logo span {
-    color: var(--primary-color);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-.btn-contact {
-    background: var(--dark-color);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-/* Section Hero */
-.hero {
+.hero-wix {
     height: 100vh;
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072') no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle at top right, #e7f0ff, white);
-    padding: 0 5%;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    color: var(--dark-color);
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px;
-}
-
-.btn-primary {
-    text-decoration: none;
-    background: var(--primary-color);
-    color: white;
-    padding: 15px 35px;
-    border-radius: 7px;
-    font-weight: bold;
-    margin-right: 15px;
-    display: inline-block;
-}
-
-.btn-secondary {
-    text-decoration: none;
-    color: var(--dark-color);
-    border: 1px solid #ddd;
-    padding: 15px 35px;
-    border-radius: 7px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-/* Section Features */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 80px 8%;
-    background: var(--light-bg);
-}
-
-.card {
-    background: white;
+.overlay {
+    background: rgba(0, 0, 0, 0.4); /* Effet sombre sur l'image pour lire le texte */
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.cta-wix {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.card h3 {
-    margin-bottom: 15px;
-    color: var(--dark-color);
-}
-
-/* Adaptabilité Mobile */
-@media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.2rem; }
-    .nav-links { display: none; } /* On simplifie pour le mobile */
+.cta-wix:hover {
+    background: white;
+    color: black;
 }
